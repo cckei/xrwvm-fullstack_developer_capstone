@@ -58,6 +58,9 @@ app.get('/fetchReviews/dealer/:id', async (req, res) => {
 
 // Express route to fetch all dealerships
 app.get('/fetchDealers', async (req, res) => {
+
+    console.log('fetchDealers()');
+
     try {
         const documents = await Dealerships.find();
         res.json(documents);
